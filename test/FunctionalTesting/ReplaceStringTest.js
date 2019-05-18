@@ -16,17 +16,7 @@ const result = require('../../Functional_programs/StringReplacement');
 
 var strlen = result.length;
 var str = result;
-function contains(inputtxt) {
-    var letters = /^[A-Za-z]+$/;
-    if (inputtxt.value.match(letters)) {
-        return true;
-    }
-    else {
-        alert("message");
-        return false;
-    }
 
-}
 describe('StringReplace', function () {
     /*****************************************************
       * @description This Test is input is atleast more than 3 charater 
@@ -41,17 +31,6 @@ describe('StringReplace', function () {
       */
     it('user Name should Only string type', function () {
         assert.notTypeOf(str, 'Number');
-    });
-    /*****************************************************
-      * @description This Test is for input number should be between 0 to 32 
-      * @returns true or false 
-      */
-
-    it('contains only abcd', function () {
-        let result2 = contains(result);
-
-
-        assert.isTrue(result2);
     });
 
 

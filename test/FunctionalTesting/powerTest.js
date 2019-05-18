@@ -37,9 +37,9 @@ describe('PowerOfTwo', function () {
     * @description This Test is
     * @returns true or false 
     */
-  it('number should be between 0 to 31 ', function () {
+  it('number is not valid  ', function () {
     let number = result[0];
-    assert.isTrue(number < 0 || number > 31);
+    assert.isTrue(number < 0 || number > 31,'Number is valid it is between 0 to 31');
   });
   /*****************************************************
     * @description This Test is

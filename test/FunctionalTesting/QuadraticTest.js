@@ -14,30 +14,53 @@ const result = require('../../Functional_programs/Quadratic');
 
 
 describe('Quadratic testing positive ', function () {
-    // it('a is valid', function () {
-    //     var a = result[0];
-    //     assert.isNumber(a ,' a is number');
-    // });
-    // it('b is valid', function () {
-    //     var temperature = result[1];
-    //     assert.isTrue(temperature, 'Number ');
-    // });
-    // it('c is not valid', function () {
-    //     var w = result[2];
-    //     assert.isTrue(w, 'Number');
-    // });
+    /********************************************************
+     * @description this mehtod test user imput is valid or not
+     * @returns true or false 
+     */
+    it('a is valid', function () {
+        var a = result[0];
+        assert.isNumber(a, ' a is number');
+    });
+    /********************************************************
+     * @description this mehtod test second mber b of quadratic equationis valid or not 
+     * @returns true or false 
+     */
+    it('b is valid', function () {
+        var temperature = result[1];
+        assert.isNumber(temperature, 'Number ');
+    });
+    /********************************
+     * @description this mehtod test uwerinput valid or not
+     * @returns true or false 
+     */
+    it('c is  valid', function () {
+        var w = result[2];
+        assert.isNumber(w, 'Number');
+    });
+    /********************************************************
+     * @description this mehtod test output of program= delta  is greater than zero then case passes
+     * @returns true or false 
+     */
 
     it('delta is greater than zero', function () {
-        var w = result[3];
-        assert.isTrue(w > 0, ' output is correct ');
-    });
+        var delta = result[3];
+        assert.isTrue(delta > 0, ' output is correct ');
+    }); /********************************************************
+    * @description this mehtod test output of program = delta is equals to zero then it return true
+    * @returns true or false 
+    */
 
     it('delta is equal to  zero', function () {
-        var w = result[3];
-        assert.isTrue(w == 0, ' output is correct');
+        var delta = result[3];
+        assert.isTrue(delta == 0, ' output is correct');
     });
+    /********************************************************
+     * @description this mehtod test output ogf programs= delta is less than  zero it return true
+     * @returns true or false 
+     */
     it('delta is less  than zero', function () {
-        var w = result[3];
-        assert.isTrue(w < 0, ' output is correct');
+        var delta = result[3];
+        assert.isTrue(delta < 0, ' output is correct');
     });
 });

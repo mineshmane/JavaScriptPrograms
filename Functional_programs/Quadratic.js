@@ -6,7 +6,7 @@
 * @file : Quadratic.js
 * @module : 
 * @author : Minesh Mane <mineshmane94@gmail.com>
-* @since : 09-05-2019
+* @since : 12-05-2019
 *
 *************************************************************************************************/
 var read = require('readline-sync');
@@ -16,11 +16,9 @@ var utility = require('./Utility');
 
 function quadratic() {
 
-
-
-    var a = read.question(" Enter value of a");
-    var b = read.question("Enter value of b");
-    var c = read.question(" value of c");
+    var a = read.questionInt(" Enter value of a");
+    var b = read.questionInt("Enter value of b");
+    var c = read.questionInt(" value of c");
     var delta = utility.findRoot(a, b, c);
 
     return [a, b, c, delta];
