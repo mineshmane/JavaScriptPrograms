@@ -27,19 +27,20 @@ describe('BinarySearch', function () {
     });
 
     /****
-       * @description This TestCase search el;emt found then returns true 
-       * @returns true or false 
-       */
-    it('search element found', function () {
-        var rsult = result[1];
-        assert.equal(rsult, 1, 'search Element not found please Enter array elements only:');
-    });
-    /****
        * @description This TesCase is for search element not found it return true  
        * @returns true or false 
        */
-    it('search element not  found', function () {
+    it('search element   found', function () {
         var rsult = result[1];
-        assert.notEqual(rsult, 1, 'search Element is found:');
+        assert.notEqual(rsult, -1, 'search Element is not found:');
+    });
+
+    /****
+       * @description This TestCase search el;emt found then returns true 
+       * @returns true or false 
+       */
+      it('search element not found', function () {
+        var rsult = result[1];
+        assert.equal(rsult, -1, 'search Element is found :');
     });
 });

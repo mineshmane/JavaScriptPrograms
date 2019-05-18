@@ -44,7 +44,7 @@ describe('AngramDetectionTest', function () {
        * @description This Method checks Programs output is Expected Output or not 
        * @returns true or false 
        */
-    it('Output is Positive String Is Anagram ', function () {
+    it('Output  String Is Anagram ', function () {
         var str = result[4];
         assert.isTrue(str !== 0, 'string is not anagram');
     });
@@ -53,7 +53,7 @@ describe('AngramDetectionTest', function () {
        * @description This Method checks Programs output is Expected Output or not 
        * @returns true or false 
        */
-    it('Output is Negative String Is Anagram ', function () {
+    it('Output  String Is  not Anagram ', function () {
         var str = result[4];
         assert.isTrue(str == 0, 'string is  anagram');
     });
