@@ -8,8 +8,6 @@
 * @since : 14-05-2019
 *    
 **********************************/
-
-
 const assert = require('chai').assert;
 const result = require('../../AlgorithmPrograms/BinarySearchInt');
 

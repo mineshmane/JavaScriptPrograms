@@ -33,8 +33,6 @@ describe('TemperatureConvertor', function () {
         assert.equal(res, 'c', ' you Entered  f so this tet is for celcius ');
 
         console.log(res);
-
-
     });
     /****
       * @description This Test is for your choice of conversion of temp valid or not 

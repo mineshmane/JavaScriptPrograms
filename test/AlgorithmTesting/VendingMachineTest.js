@@ -54,7 +54,6 @@ describe('negative test ', function () {
         assert.isTrue(input < 0, ' Amount is valid it is positive number  ');
     });
 
-
     /****
            * @description this method test output of program 
            * @param Int Amount

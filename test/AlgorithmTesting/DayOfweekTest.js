@@ -8,7 +8,6 @@
 * @since : 14-05-2019
 *    
 **********************************/
-
 const assert = require('chai').assert;
 var result = require('../../AlgorithmPrograms/DayOfWeek');
 
@@ -17,9 +16,7 @@ describe('DayOfWeek Positive testing', function () {
        * @description This Method Test date is valid or not  
        * @returns true or false 
        */
-
     it('date is Valid  ', function () {
-
         var date = result[0];
         assert.isTrue(date > 0 && date < 32, ' Date is not Valid it is should be between 1 to 31');
     });
