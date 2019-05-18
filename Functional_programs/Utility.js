@@ -214,11 +214,9 @@ module.exports = {
         } catch (error) {
             console.log("error");
         }
-
     },
 
-
-    /**
+    /**********************************************************************************
     * @descriptionThis Mehtod is for calculate the whether chill using temp and windspeed
     * @param integer temperature and windspeed
     * @returns w chill whether

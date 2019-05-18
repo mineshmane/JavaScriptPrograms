@@ -6,7 +6,6 @@ module.exports = {
     */
 
     printPrimeNumbers(lowest, highest) {
-
         try {
             var number = 0;
             var divisor = 0;
@@ -46,18 +45,11 @@ module.exports = {
             var count = 0;
             var flag = 0;
             console.log(" strlen1", str_Len);
-
-
-
             if (format.test(firstString) && format.test(secondString)) {
                 if (str_Len != str_Length) {
                     console.log(" its is not anagram");
-
-
                 } else {
-
                     for (var i = 0; i < str_Len; i++) {
-
 
                         for (var j = 0; j < str_Length; j++) {
                             if (secondString[j].toLowerCase() == firstString[i].toLowerCase()) {
@@ -82,8 +74,6 @@ module.exports = {
                 console.log(" only For String Not for digits ");
 
             }
-
-
         }
         catch (error) {
             console.log(" Exception : ")
@@ -303,8 +293,6 @@ module.exports = {
         } catch (error) {
             console.log(" error");
         }
-
-
     },
 
     /*************************************************************************
@@ -418,23 +406,28 @@ module.exports = {
       **/
 
     sort(arr, lowIndex, highIndex) {
-        if (lowIndex < highIndex) {
-            //// Find the middle point
-            var middle = Math.floor((lowIndex + highIndex) / 2);
-            //// Sort first and second halves
-            this.sort(arr, lowIndex, middle);
-            this.sort(arr, middle + 1, highIndex);
-            //// Merge the sorted halves
-            this.Merge(arr, lowIndex, middle, highIndex);
+        try {
+            if (lowIndex < highIndex) {
+                // Find the middle point
+                var middle = Math.floor((lowIndex + highIndex) / 2);
+                // Sort first and second halves
+                this.sort(arr, lowIndex, middle);
+                this.sort(arr, middle + 1, highIndex);
+                // Merge the sorted halves
+                this.Merge(arr, lowIndex, middle, highIndex);
+            }
+        } catch (error) {
+            console.log("error ");
         }
+
         return arr;
     },
+
     /*************************************************************************
       * @description this method is used for bubble Sort String value 
       * @param String array
       * @returns sorted array 
       **/
-
     Merge(sortArray, lowIndex, middle, highIndex) {
         //// Calculate length of two sub arrays
         var leftSize = middle - lowIndex + 1;

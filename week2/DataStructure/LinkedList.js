@@ -36,7 +36,6 @@ class LinkedList {
             current.next = node;
         }
         this.size++;
-
     }
     // prints the list items 
     printList() {

@@ -8,9 +8,10 @@
 * @since : 14-05-2019
 *    
 **********************************/
+
 const assert = require('chai').assert;
 const result = require('../../AlgorithmPrograms/Anagramdetect');
-console.log(result[3], "       ", result[3]);
+console.log(result, "       ", result[3]);
 
 
 describe('AngramDetectionTest', function () {
@@ -35,9 +36,11 @@ describe('AngramDetectionTest', function () {
        * @description this method test UserEntered String contains Alphabets only 
        * @returns true or false 
        */
-    it('user Enterd string only alphabets ', function () {
+    it('user Enterd is string  ', function () {
         var str = result[2];
-        assert.isString(str, 'String');
+        var str2=result[3];
+        assert.isString(str);
+        assert.isString(str2,'not sting');
     });
     /****
        * @description This Method checks Programs output is Expected Output or not 

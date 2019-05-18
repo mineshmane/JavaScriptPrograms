@@ -17,7 +17,7 @@ function guess() {
     var utility = require('./AlgoUtility');
 
     console.log("guess a no between 0 to 127 ");
-    var number = read.questionInt(" Enter guessed number :");
+    var number = read.question(" Enter guessed number :");
     if (number > 0 && number <= 127) {
         var powerNumber = Math.pow(2, number);
         var guessedNumber = utility.find(powerNumber);

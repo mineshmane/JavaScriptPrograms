@@ -26,7 +26,7 @@ describe('distance', function () {
         var res = dist_res[1];
         console.log(" result ", res);
 
-        assert.isNumber(res, 'Number',' y is not nummmber Enter Numher');
+        assert.isNumber(res,' y is not nummmber Enter Numher');
     });
 
     it(' x should be integer value ', function () {

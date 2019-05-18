@@ -8,15 +8,11 @@
 * @since : 14-05-2019
 *    
 **********************************/
-
 const assert = require('chai').assert;
 const result = require('../../AlgorithmPrograms/VendingMachine');
 
 
 describe('VendingMachine Testing', function () {
-
-
-
     /****
        * @description this method test user Entered Amount is valid or not it should be greater than zero
        * @param Int Amount
@@ -27,8 +23,6 @@ describe('VendingMachine Testing', function () {
         var input = result[1];
         assert.isTrue(input > 0, ' Amount should not be negative ');
     });
-
-
     /****
            * @description this method test output of program 
            * @param Int Amount
@@ -39,8 +33,6 @@ describe('VendingMachine Testing', function () {
         var input = result[0];
         assert.isTrue(input >= 0, ' output is not expected ');
     });
-
-
 });
 describe('negative test ', function () {
     /****

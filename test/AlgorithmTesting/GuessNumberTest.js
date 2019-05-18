@@ -10,8 +10,32 @@
 **********************************/
 const assert = require('chai').assert;
 const result = require('../../AlgorithmPrograms/FindGuessNumber');
+// const R=require('../../AlgorithmPrograms/AlgoUtility');
+
+// describe(' method calling ',function(){
+
+//     let result=R;
+//     assert.isNumber(result.find(),' it should be number');
+
+// });
 
 describe('FindguessNumber Test', function () {
+
+
+    /****
+       * @description this method test UserEntered String contains Alphabets only 
+       * @returns true or false 
+       */
+    it('user Enterd is Number  ', function () {
+
+        //  var str = t;
+        str = parseInt(result[0]);
+        console.log(str);
+        str1 = str;
+        //  var str2=result[3];
+        assert.isNumber(str1);
+        //  assert.isString(str2,'not sting');
+    });
 
     /****
        * @description This TestCase is for UserEntred number is between 0 to 127
