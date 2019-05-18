@@ -7,8 +7,7 @@
 * @author : Minesh Mane <mineshmane94@gmail.com>
 * @since : 14-05-2019
 *    
-**********************************/
-
+*****************/
 const assert = require('chai').assert;
 const result = require('../../Functional_programs/PowerOfTwo');
 console.log(result);

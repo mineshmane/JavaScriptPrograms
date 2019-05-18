@@ -10,12 +10,12 @@
 * @since : 09-05-2019
 *
 *************************************************************************************************/
-function harmonic(){
-var read = require('readline-sync');
-var utility = require('./Utility');
-var number = read.question("Enter number:\n");
-var harmonic =utility.printHarmonicNumbers(number);
-console.log(harmonic);
-return [number,harmonic];
+function harmonic() {
+    var read = require('readline-sync');
+    var utility = require('./Utility');
+    var number = read.questionInt("Enter number:\n");
+    var harmonic = utility.printHarmonicNumbers(number);
+    console.log(harmonic);
+    return [number, harmonic];
 }
-module.exports=harmonic();
+module.exports = harmonic();

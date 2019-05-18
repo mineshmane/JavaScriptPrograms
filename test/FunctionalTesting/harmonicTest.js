@@ -24,8 +24,6 @@ describe('Harmonic number', function () {
 
     it('out put  should not be zero ', function () {
         var res = result[1];
-        console.log(" result ", res);
-
         assert.isTrue(res != 0, 'output should bnot be zero');
     });
     /*****************************************************
@@ -35,7 +33,6 @@ describe('Harmonic number', function () {
 
     it('output is greater than one ', function () {
         var res = result[1];
-        console.log(" result ", res);
         assert.isFalse(res < 0);
     });
     /*****************************************************
@@ -44,7 +41,6 @@ describe('Harmonic number', function () {
        */
     it('input should be lessthan 0 ', function () {
         var res = result[0];
-        console.log(" result ", res);
         assert.isTrue(res != 0);
     });
 });

@@ -12,7 +12,7 @@
 function sumof() {
     var utility = require('./Utility');
     var read = require('readline-sync');
-    var size = read.question("Enter size of array");
+    var size = read.questionInt("Enter size of array");
     var array = [];
 
     for (var i = 0; i < size; i++) {

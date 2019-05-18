@@ -22,8 +22,6 @@ describe('distance', function () {
        * @param Int x and y
        * @returns true or false 
        */
-
-
     it(' y should be integer value ', function () {
         var res = dist_res[1];
         console.log(" result ", res);

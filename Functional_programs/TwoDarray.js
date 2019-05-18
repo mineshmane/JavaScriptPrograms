@@ -15,8 +15,8 @@ function arrayD() {
     var utility = require('./Utility');
 
     var read = require('readline-sync');
-    var row = read.question('enter the size of row =');
-    var column = read.question('enter the size of column =');
+    var row = read.questionInt('enter the size of row =');
+    var column = read.questionInt('enter the size of column =');
     utility.twoDarray(row, column);
 
     return [row, column];

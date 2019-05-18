@@ -13,7 +13,7 @@ function leap() {
 
     var utility = require('./Utility');
     var read = require('readline-sync');
-    var year = read.question(" Enter the year to cheak leap or not: ");
+    var year = read.questionInt(" Enter the year to cheak leap or not: ");
     var result = utility.checkLeapYear(year);
 
     var len = year.length;

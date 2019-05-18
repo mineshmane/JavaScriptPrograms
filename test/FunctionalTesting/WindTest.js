@@ -57,7 +57,7 @@ describe('Windchill Negative testing  ', function () {
       */
     it('Temperature Not valid', function () {
         var temperature = result[0];
-        assert.isTrue(temperature > 50, ' teperature is valid it return -1 when  ');
+        assert.isTrue(temperature > 50, ' teperature is valid  ');
     });
     /********************************************************
       * @description this mehtod test user input parameter are valid or not 

@@ -26,7 +26,6 @@ describe('TwoDArray', function () {
    * @description This Test is for Colum should be valid number 
    * @returns true or false 
    */
-
     it('2D array column is valid size ', function () {
         let result2 = result[1];
         assert.isTrue(result2 > 0, ' 2D array cloum size should be minimum 1 ');

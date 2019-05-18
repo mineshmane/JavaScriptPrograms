@@ -7,7 +7,7 @@
 * @author : Minesh Mane <mineshmane94@gmail.com>
 * @since : 14-05-2019
 *    
-**********************************/
+********************************/
 
 var assert = require('chai').assert;
 var result = require('../../Functional_programs/FlipCoin');
@@ -15,7 +15,6 @@ console.log(" result 2:", result);
 
 
 describe('FlipCoin', function () {
-
 
     /********************************************************
        * @description this mehtod test user input parameter are valid or not 

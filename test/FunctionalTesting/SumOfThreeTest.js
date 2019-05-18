@@ -1,7 +1,7 @@
 /************************************************************************************************
 * Execution : 1. default node cmd> mocha test/FunctionalTesting/SumOfThreeTest.js 
 * 
-* @Purpose : Unit testing of SumOfThree Programs triplets finding
+* @Purpose : Unit testing of SumOfThreeNumbers Programs finding triplets pairs 
 * @file : SumOfThreeTest.js
 * @module : 
 * @author : Minesh Mane <mineshmane94@gmail.com>
@@ -11,8 +11,6 @@
 
 const assert = require('chai').assert;
 const result = require('../../Functional_programs/SumOfThree');
-
-
 
 describe('SumOfThree', function () {
    /*****************************************************

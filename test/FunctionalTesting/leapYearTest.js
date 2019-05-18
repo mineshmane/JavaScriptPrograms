@@ -9,7 +9,6 @@
 *    
 **********************************/
 
-
 var assert = require('chai').assert;
 var result = require('../../Functional_programs/LeapYear');
 console.log(result[0], "length of digits", result[1]);
