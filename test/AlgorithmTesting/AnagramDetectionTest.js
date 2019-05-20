@@ -11,7 +11,7 @@
 
 const assert = require('chai').assert;
 const result = require('../../AlgorithmPrograms/Anagramdetect');
-console.log(result, "       ", result[3]);
+//console.log(result, "       ", result[3]);
 
 
 describe('AngramDetectionTest', function () {

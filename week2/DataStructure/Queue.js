@@ -3,4 +3,7 @@ class Queue{
         this.front=front;
         this.rear=rear;
     }
+
+
 }
+

@@ -141,8 +141,7 @@ module.exports = {
         var flag = 0;
         try {
             if (year > 999 && year < 10000)
-                if (((year % 4 == 0) && (year % 100 != 0)) ||
-                    (year % 400 == 0)) {
+                if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
                     console.log(year, " is leap year  ");
                     flag = flag + 1;
                 } else {

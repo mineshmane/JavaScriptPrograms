@@ -389,7 +389,6 @@ module.exports = {
                     total = total + NumberofNotes;
                     console.log(notes[i] + " Rs notes :" + NumberofNotes);// ith number of notes
                     value = value % notes[i];
-
                 }
             }
             console.log("Notal notes : " + total); // count total notes
@@ -419,7 +418,6 @@ module.exports = {
         } catch (error) {
             console.log("error ");
         }
-
         return arr;
     },
 
@@ -456,7 +454,6 @@ module.exports = {
                 sortArray[k] = RightArray[j];
                 j++;
             }
-
             k++;
         }
         //// Copy remaining elements of L[] if any
