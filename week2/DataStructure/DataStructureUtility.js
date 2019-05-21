@@ -1,6 +1,11 @@
 var read = require('readline-sync');
 
 module.exports = {
+    /**
+    * @description this method is for write test file using path
+    * @param filepath , data
+    * @returns nothing
+    */
 
     writeFile(filePath, data) {
         const fs = require('fs');
@@ -11,7 +16,11 @@ module.exports = {
 
         });
     },
-
+    /**
+    * @description this method is for print prime in formate
+    * @param Integer array 
+    * @returns priunted prime numbers
+    */
 
     prime() {
         constructor()
@@ -46,7 +55,11 @@ module.exports = {
     },
 
 
-
+    /**
+    * @description this method is for find prime nuymber
+    * @param Integer array 
+    * @returns prie numbers
+    */
 
     getPrimeNumber(number) {
         if (number <= 1000) {
@@ -67,6 +80,11 @@ module.exports = {
             console.log("Number is out of range")
         }
     },
+    /**
+    * @description this method is for to check number is prime or not
+    * @param Integer array 
+    * @returns true false
+    */
     isPrime(num) {
         try {
             if (num == 0 || num == 1)
@@ -81,7 +99,11 @@ module.exports = {
             console.log(e.message);
         }
     },
-
+    /**
+       * @description this method is for find prime numbers
+       * @param Integer array 
+       * @returns prime numbers
+       */
     findPrimeNumber(num) {
         try {
             console.log("Prime number must be in the range of 0-1000");
@@ -94,6 +116,11 @@ module.exports = {
             console.log(e.message);
         }
     },
+    /**
+    * @description this method is for check number is palindrome or not 
+    * @param Integer array 
+    * @returns ttrue or false
+    */
     isNumberPalindrome(n1) {
         try {
             var string = "";
@@ -111,7 +138,11 @@ module.exports = {
             console.log(e.message);
         }
     },
-
+    /**
+    * @description this method is for find is angram method for string anagram or not
+    * @param Integer array
+    * @returns true /false
+    */
 
     isAnagram(s1, s2) {
         try {
@@ -139,7 +170,11 @@ module.exports = {
             console.log(e.message);
         }
     },
-
+    /**
+    * @description this method is for number is Anagram palindrome checking
+    * @param Integer number
+    * @returns Anagram Paklindrome Numbers
+    */
 
     isAnagramPalindrome() {
         try {
@@ -170,6 +205,11 @@ module.exports = {
 
         }
     },
+    /**
+    * @description this method is for find the facttorials fopr binary tree
+    * @param Integer number
+    * @returns factorialnumber 
+    */
     factorial(num) {
 
         let fact = 1;;
@@ -180,13 +220,21 @@ module.exports = {
 
         return fact;
     },
-
+    /**
+    * @description this method is for binary trees
+    * @param Integer number
+    * @returns number of binary trees
+    */
     binaryTree(nodes) {
         var no_of_trees = Math.floor((this.factorial(2 * nodes)) / (this.factorial(nodes + 1) * this.factorial(nodes)));
         console.log(no_of_trees);
     },
 
-
+    /**
+    * @description this method is for print the calendar in 2D format
+    * @param Integer month and year
+    * @returns 2d printed calendar 
+    */
     calender(month, year) {
 
         let util = require('util');
@@ -234,20 +282,30 @@ module.exports = {
 
 
     },
+    /**
+    * @description this method is for check year is leap or not
+    * @param Int  year 
+    * @returns true /false
+    */
     isLeapYear(year) {
         try {
             if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
                 console.log(year, " is leap year")
                 return true;
             } else {
-    
+
                 return false;
             }
         } catch (error) {
             console.log(error);
         }
-        
+
     },
+    /**
+    * @description this method is for calculate the starting day of month
+    * @param date
+    * @returns starting Day of Month
+    */
 
     dayOfWeek(month, date, year) {
         try {
@@ -292,9 +350,11 @@ module.exports = {
         }
     },
 
-    /*
-    * This condition will checks the prime numbers.
-    */
+    /**
+     * @description this method is for number is prime or not 
+     * @param Integer array 
+     * @returns return array
+     */
     checkPrime(s1, s2) {
         var count = 0, flag = 0, k = 0;
         var array = [];
@@ -316,8 +376,10 @@ module.exports = {
         return array;
     },
 
-    /*
-    * It will used to find the Anagram numbers in Prime Numbers
+    /**
+    * @description this method is for primeAnagram numbers
+    * @param Integer array 
+    * @returns prime anagrams
     */
     findAnaPrime(ii, jj) {
         var primes = this.findPrime(ii, jj);
@@ -335,8 +397,10 @@ module.exports = {
         return anaPrimes;
     },
 
-    /*
-    * It will used to check the Anagram Numbers
+    /**
+    * @description this method is for numbers are angagrams or not 
+    * @param Integer array
+    * @returns anagram numbers
     */
     checkAnagram2(str1, str2) {
         let unsortedStr1 = "" + str1;
@@ -355,9 +419,11 @@ module.exports = {
         }
     },
 
-    /*
-    * It will used to find Prime Numbers
-    */
+    /**
+     * @description this method is for find prime numbers
+     * @param Integer number
+     * @returns  prime integers
+     */
     findPrime(s1, s2) {
         var count = 0, flag = 0, k = 0;
         var prime = [];
@@ -379,9 +445,11 @@ module.exports = {
         return prime;
     },
 
-    /*
-    * It will used to checks the item length
-  */
+    /**
+    * @description this method is for cheak char of string 1 and 2 not equal string 2 character
+    * @param string 
+    * @returns true false
+    */
     check(s1, s2) {
         for (let i = 0; i < s1.length; i++) {
             if (s1.charAt(i) != s2.charAt(i)) {
@@ -392,8 +460,10 @@ module.exports = {
     },
 
     /**
-    * It will used to sort the Items
-    **/
+    * @description this method is for sorting 
+    * @param string 
+    * @returns sorted string
+    */
     sort1(str) {
         let ch = str.split('');
         for (let i = 0; i < str.length; i++) {
