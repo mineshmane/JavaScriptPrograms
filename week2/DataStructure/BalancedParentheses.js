@@ -1,36 +1,43 @@
 function balancedP() {
     try {
 
-        var stack = require("./Stack");
+        var stack = require("../DataStructure/Stack");
         var readline = require("readline-sync");
         var expression = readline.question("Enter Arithmatic Expression to check");
         var ss = new stack.Stack();
+
         var ArithmaticExpression = expression.split("");
         console.log(ArithmaticExpression)
+        let ch;
         for (let i = 0; i < ArithmaticExpression.length; i++) {
+            ch = expression.charAt(i);
             // push in stack if "("
-            if ((ArithmaticExpression[i] == '(') || (ArithmaticExpression[i] == '{') || (ArithmaticExpression[i] == '[000')) {
-                //console.log(ArithmaticExpression[i])
-                ss.push('(');
-                ss.push('{');
-                ss.push('[');
+            if ((ch == '(') || ch == '{' || ch == '[') {
+                // console.log("arithmetic expression ", ArithmaticExpression[i])
+                ss.push(ch);
+
             }
             // pop from the stack if ")"
-            else if (ArithmaticExpression[i] == ')') {
+            else if (ch == ')' || ch == '{' || ch == '[') {
                 // if stack is empty and ")"
                 if (ss.isEmpty()) {
-                    ss.push(')');
+                    ss.push(ch);
                     break;
+                } else {
+                    ss.pop();
                 }
-                ss.pop();
             }
         }
+        console.log(" asne", ss);
+
         if (ss.isEmpty()) {
             console.log("Arithmatic Expression is Balanced");
         }
         else {
             console.log("Arithmatic Expression is Not balanced");
         }
+        // var ans=ss.isEmpty();
+
         return expression;
     }
     catch (err) {
