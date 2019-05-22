@@ -1,5 +1,5 @@
 /************************************************************************************************
-* Execution : 1. default node cmd> mocha test/DSTEST/CalendarTest.js 
+* Execution : 1. default node cmd> mocha test/DSTesting/CalendarTest.js 
 * 
 * @Purpose : Unit Testing Of Print Calendar program
 * @file : CalendarTest.js

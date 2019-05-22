@@ -1,3 +1,13 @@
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha test/binarySearchTreeTest.js 
+* 
+* @Purpose : Unit testing of BinarysearchTree program
+* @file : BinaryTreeTest.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 20-05-2019
+*    
+**********************************/
 const assert = require('chai').assert;
 const R = require('../../week2/DataStructure/BinaryTree');
 describe('Binary Tree test positive  ', function () {

@@ -1,3 +1,14 @@
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha test/DSTesting/PalindromeTest.js 
+* 
+* @Purpose : Unit testing of Palindrome string using dqueue Program
+* @file : PalindromeTest.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 22-05-2019
+*    
+**********************************/
+
 const assert = require('chai').assert;
 const R = require('../../week2/DataStructure/PalindromeCheck');
 console.log(R);
