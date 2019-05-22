@@ -2,8 +2,8 @@ function unOrder() {
 
 
     var read = require('readline-sync');
-    var ulist = require('../DataStructure/UnLinkedList');
-    var util = require('../DataStructure/DataStructureUtility');
+    var ulist = require('../DSUtil/UnLinkedList');
+    var util = require('../DSUtil/DataStructureUtility');
     var fileStream = require('fs');
     try {
         var string = fileStream.readFileSync('/home/admin1/unorder.txt', 'UTF-8');
@@ -46,7 +46,7 @@ function unOrder() {
         // if (ll === null) {
         //     throw "File is empty";
         // }
-        // return arr;
+        return string;
 
     } catch (error) {
         console.log(" error excption");

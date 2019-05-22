@@ -3,10 +3,10 @@
 
 function prime() {
     var read = require('readline-sync');
-    var Prime = require('../DataStructure/DataStructureUtility');
+    var Prime = require('../DSUtil/DataStructureUtility');
     //var show = require('util');
     var primes = [[], [], [], [], [], [], [], [], [], []];
-    var initial = -2;
+    var initial = 1;
     var final = 100;
 
     try {
@@ -17,9 +17,9 @@ function prime() {
         else {
             console.log(' Prime Numbers in the given range are \n');
             for (var index = 0; index < 10; index++) {
-                primes[index] = Prime.checkPrime(initial, final);
-                initial = initial + 100;
-                final = final + 100;
+                primes[index] = Prime.checkPrime(initial, final);//put the prime numbers in array 
+                initial = initial + 100;//change start index of value by 100
+                final = final + 100;//change end value by 100 
             }
             var start = 0;
             var end = 100;
@@ -34,13 +34,13 @@ function prime() {
                 end = end + 100;
                 console.log();
             }
-            return initial;
+            
         }
     }
     catch (err) {
         console.log('error');
     }
 
-
+    return [initial, final];
 }
 module.exports = prime();

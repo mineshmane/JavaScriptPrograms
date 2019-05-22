@@ -1,7 +1,7 @@
 function balancedP() {
     try {
 
-        var stack = require("../DataStructure/Stack");
+        var stack = require('../DSUtil/Stack');
         var readline = require("readline-sync");
         var expression = readline.question("Enter Arithmatic Expression to check");
         var ss = new stack.Stack();
@@ -18,7 +18,7 @@ function balancedP() {
 
             }
             // pop from the stack if ")"
-            else if (ch == ')' || ch == '{' || ch == '[') {
+            else if (ch == ')' || ch == '}' || ch == ']') {
                 // if stack is empty and ")"
                 if (ss.isEmpty()) {
                     ss.push(ch);
