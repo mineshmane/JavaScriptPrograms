@@ -1,3 +1,15 @@
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha test/DSTesting/PalindromeCheck.js 
+* 
+* @Purpose : To check string is palindome or not using dequeue
+* @file : PalindromeCheck.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 22-05-2019
+*    
+**********************************/
+
+
 function palin() {
     try {
         let deque = require("../DSUtil/dequeue");

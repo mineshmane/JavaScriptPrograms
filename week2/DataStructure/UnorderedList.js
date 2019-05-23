@@ -1,6 +1,15 @@
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha test/Unordere.js 
+* 
+* @Purpose : To search and delete word using file Unorderedlist Program usimng linkelist
+* @file : Unoreder.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 22-05-2019
+*    
+**********************************/
+
 function unOrder() {
-
-
     var read = require('readline-sync');
     var ulist = require('../DSUtil/UnLinkedList');
     var util = require('../DSUtil/DataStructureUtility');

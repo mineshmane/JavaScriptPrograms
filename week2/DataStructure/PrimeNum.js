@@ -1,5 +1,14 @@
 
-
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha test/DSTesting/PrimeNum.js 
+* 
+* @Purpose : To print 1 to 1000 prime numbers in 2D format 
+* @file : PrimeNum.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 22-05-2019
+*    
+**********************************/
 
 function prime() {
     var read = require('readline-sync');

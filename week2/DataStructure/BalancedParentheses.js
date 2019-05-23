@@ -1,3 +1,14 @@
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha BalancedParenthesesTest.js 
+* 
+* @Purpose : To check given expression is Balnced or not  of Balancedparenthes Program suing stack
+* @file : BalancedParenthesesTest.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 22-05-2019
+*    
+**********************************/
+
 function balancedP() {
     try {
 

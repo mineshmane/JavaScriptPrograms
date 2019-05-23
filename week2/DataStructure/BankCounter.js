@@ -1,3 +1,15 @@
+/************************************************************************************************
+* Execution : 1. default node cmd> mocha test/BankCounter.js 
+* 
+* @Purpose : To implement Queue for Bankcounter of bank program
+* @file : BankCounter.js
+* @module : 
+* @author : Minesh Mane <mineshmane94@gmail.com>
+* @since : 17-05-2019
+*    
+**********************************/
+
+
 function cashCounter() {
     try {
         var read = require('readline-sync');
@@ -22,7 +34,7 @@ function cashCounter() {
         queue.show();
         for (var counter = 1; counter <= people; counter++) {
             do {
-
+             
                 console.log("Welcome To Bank");
                 console.log("Person " + counter + " in queue:");
                 console.log("please Enter correct input : ");
