@@ -1,28 +1,28 @@
 function Stack() {
-    this._size = 0;
+    this.top = 0;
     this._storage = [];
 }
 
 Stack.prototype.push = function (data) {
-    var size = ++this._size;
+    var size = ++this.top;
     this._storage[size] = data;
 };
 
 Stack.prototype.pop = function () {
-    var size = this._size,
+    var size = this.top,
         deletedData;
 
     if (size) {
         deletedData = this._storage[size];
 
         delete this._storage[size];
-        this._size--;
+        this.top--;
 
         return deletedData;
     }
 };
 Stack.prototype.isEmpty = function () {
-    return this._size==0;
+    return this.top==0;
 }
 
 module.exports = { Stack }

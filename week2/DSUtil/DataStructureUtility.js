@@ -378,7 +378,7 @@ module.exports = {
             }
             if (flag == 1) {
                 array[k++] = i;
-             
+
 
             }
         }
@@ -390,13 +390,13 @@ module.exports = {
     * @param Integer array 
     * @returns prime anagrams
     */
-    findAnaPrime(ii, jj) {
-        var primes = this.findPrime(ii, jj);
+    findAnaPrime(initial, final) {
+        var primes = this.findPrime(initial, final);
         var n = primes.length;
         var anaPrimes = [];
         var h = 0;
-        for (let i = 0; i < n - 1; i++) {
-            for (let j = i + 1; j < n - 1; j++) {
+        for (let i = 0; i < n; i++) {
+            for (let j = i + 1; j < n; j++) {
                 if (this.checkAnagram2(primes[i], primes[j])) {
                     anaPrimes[h++] = primes[i];
                     anaPrimes[h++] = primes[j];
