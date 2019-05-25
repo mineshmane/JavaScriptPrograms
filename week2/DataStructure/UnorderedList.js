@@ -26,9 +26,9 @@ function unOrder() {
         ll.show();
 
         console.log(" Enter string Your Want search : ");
-        let answer = read.question();
+        var answer = read.question();
 
-
+        var found = ll.search(answer);
         if (ll.search(answer)) {
             console.log(" elemten found ");
             console.log(" removing element from ");
@@ -55,10 +55,10 @@ function unOrder() {
         // if (ll === null) {
         //     throw "File is empty";
         // }
-        return string;
 
     } catch (error) {
         console.log(" error excption");
     }
+    return [string, answer, found]
 }
 module.exports = unOrder();

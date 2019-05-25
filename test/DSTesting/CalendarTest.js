@@ -14,7 +14,7 @@ var result = require('../../week2/DataStructure/Calendar');
 describe('DayOfWeek Positive testing', function () {
 
     /****
-       * @description This Method Test Array size is valid or not 
+       * @description This Method Test And retuns true when months is valid input
        * @returns true or false 
        */
 
@@ -23,7 +23,7 @@ describe('DayOfWeek Positive testing', function () {
         assert.isTrue(month > 0 && month < 13, 'Month is Not valid it is should 1 to 12')
     });
     /****
-       * @description This Method Test Array size is valid or not 
+       * @description This Method Test case return true when user input is valid year 
        * @returns true or false 
        */
 
@@ -32,7 +32,7 @@ describe('DayOfWeek Positive testing', function () {
         assert.isTrue(year > 999 && year < 9999, ' year should be 4 digits only ')
     });
     /****
-       * @description This Method Test Array size is valid or not 
+       * @description This Method Test case check start day valid or not of day method
        * @returns true or false 
        */
 
@@ -46,7 +46,7 @@ describe('DayOfWeek Positive testing', function () {
 describe('DayOfWeek Negative testing', function () {
 
     /****
-       * @description This Method Test Array size is valid or not 
+       * @description This Method Test Negative it return true when month user input invalid month
        * @returns true or false 
        */
 
@@ -55,7 +55,7 @@ describe('DayOfWeek Negative testing', function () {
         assert.isTrue(month < 0 || month > 13, 'Month is valid it is in between 1 to 12')
     });
     /****
-       * @description This Method Test Array size is valid or not 
+       * @description This Method Test return true when usr input invlaid year
        * @returns true or false 
        */
 

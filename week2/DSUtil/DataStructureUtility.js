@@ -489,8 +489,13 @@ module.exports = {
             sortedStr += ch[i];
         }
         return sortedStr;
-    }
+    },
 
+    hash(str) {
+        var index = Math.floor(str % 11);
+
+        return index;
+    }
 
 
 

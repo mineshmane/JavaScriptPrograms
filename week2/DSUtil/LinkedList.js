@@ -12,25 +12,27 @@ class LinkedList {
     }
 
     add(data) {
-        let addNode = new Node(data);
+
+        let node = new Node();
+        node.data = data;
 
 
         if (this.head == null) {
-            this.head = addNode;
+            this.head = node;
             this.size++;
             return;
-        }
-        else {
-            var current = this.head;
-            while (current.next != null) {
-                current = current.next;
+        } else {
+
+            let curr = this.head;
+            while (curr.next != null) {
+                curr = curr.next;
             }
             this.size++;
-            current.next = addNode;
+            curr.next = node;
         }
     }
 
-    insertFirst(data) {
+    insertAtFirst(data) {
         let insertNode = new Node(data);
         if (this.head == null) {
             this.head = insertNode;
@@ -43,6 +45,43 @@ class LinkedList {
             this.size++;
             return;
         }
+    }
+    insertAtMiddle(data) {
+
+        
+        var newNode=new Node();
+		newNode.data=data;
+		this.size++;
+		 // if list is empty 
+        if (this.head == null) 
+        this.head = newNode;
+  
+        else { 
+            // get a new node 
+            //Node newNode = New Node(); 
+  
+            // assign values to the slow  
+            // and fast pointers 
+            var slow = this.head; 
+            var fast = this.head.next; 
+  
+            while (fast != null && fast.next!= null)  
+            { 
+                // move slow pointer to next node 
+                slow = slow.next; 
+  
+                // move fast pointer two nodes  
+                // at a time 
+                fast = fast.next.next; 
+            } 
+  
+            // insert the 'newNode' and adjust  
+            // the required links 
+            newNode.next = slow.next; 
+            slow.next = newNode; 
+        } 
+		
+
     }
 
     insertAtPosition(index, data) {
@@ -76,6 +115,9 @@ class LinkedList {
             current = current.next;
         }
         return false;
+    }
+    size() {
+        return this.size;
     }
 
     deleteFirst() {
