@@ -34,9 +34,12 @@ function orderedList() {
 
 		ll.sizeOfList();
 
+
+	
+
 		console.log("enter the value you want to search in file");
 
-		var SEARCH = read.question();// calling method to scan user word
+		var SEARCH = read.questionInt();// calling method to scan user word
 		var search=ll.search(SEARCH);
 		if (ll.search(SEARCH) == true) // calling search method to check condition
 		{

@@ -92,8 +92,8 @@ function balancedP() {
 
         return [expression, coun, count, counter, output];
     }
-    catch (err) {
-        console.log(err);
+    catch (error) {
+        console.log(error);
     }
 }
 module.exports = balancedP();

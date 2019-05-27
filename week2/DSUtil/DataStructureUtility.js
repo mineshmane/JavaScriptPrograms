@@ -495,6 +495,17 @@ module.exports = {
         var index = Math.floor(str % 11);
 
         return index;
+    },
+    allLetter(inputtxt) {
+        var letters = /^[A-Za-z]+$/;
+        if (inputtxt.match(letters)) {
+            console.log('Your name have accepted : you can try another');
+            return true;
+        }
+        else {
+            console.log('Please input alphabet characters only');
+            return false;
+        }
     }
 
 

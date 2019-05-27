@@ -12,6 +12,7 @@ function cashCounter() {
     try {
         var read = require('readline-sync');
         var Que = require('../DSUtil/Queue');
+        var util = require('../DSUtil/DataStructureUtility')
         var amount = 10000;
         var chocie;
         console.log("Enter How many People are in Queue");
@@ -19,10 +20,14 @@ function cashCounter() {
         var queue = new Que.Queue(people);// crate object of queue assigned size to queue
         console.log("enter " + people + " name in list");
         for (var i = 1; i <= people; i++) {
+            do {
+                console.log("Enter person " + i + " name");
+                var CustNAME = read.question();
+                queue.enqueue(CustNAME);// calling enQueue method to add name of person to q object
 
-            console.log("Enter person " + i + " name");
-            var CustNAME = read.question();
-            queue.enqueue(CustNAME);// calling enQueue method to add name of person to q object
+            } while (util.allLetter(CustNAME) == false)
+
+
 
         }
         console.log("Queue is ");
@@ -62,7 +67,7 @@ function cashCounter() {
                     } else {
                         console.log("Enter Valid amount");
                     }
-                  
+
 
                     break;
 
