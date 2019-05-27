@@ -490,12 +490,22 @@ module.exports = {
         }
         return sortedStr;
     },
-
+     /**
+    * @description this method is for hashtable index generating purpose
+    * @param int value 
+    * @returns in value
+    */
     hash(str) {
         var index = Math.floor(str % 11);
 
         return index;
     },
+
+     /**
+    * @description this method is for user input character all alphabets validation
+    * @param string 
+    * @returns true or false
+    */
     allLetter(inputtxt) {
         var letters = /^[A-Za-z]+$/;
         if (inputtxt.match(letters)) {
