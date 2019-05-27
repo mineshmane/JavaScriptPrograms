@@ -1,0 +1,32 @@
+{
+    "Rice": [
+        {
+            "name": "Kolam Rice",
+            "price": 120
+        },
+        {
+            "name": "Basmati Rice",
+            "price": 210
+        }
+    ],
+    "Wheats": [
+        {
+            "name": "Einkorn Wheat",
+            "price": 220
+        },
+        {
+            "name": "Aahar Wheat",
+            "price": 260
+        }
+    ],
+    "Pulse": [
+        {
+            "name": "Samarth Pulse",
+            "price": 600
+        },
+        {
+            "name": "Dal Pulse",
+            "price": 800
+        }
+    ]
+}
