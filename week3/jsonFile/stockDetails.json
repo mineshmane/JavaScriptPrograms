@@ -1,0 +1,19 @@
+{
+    "Stock": [
+        {
+            "stock_name": "IBM",
+            "Num_of_shares": 189,
+            "share_price": 567
+        },
+        {
+            "stock_name": "Wipro",
+            "Num_of_shares": 2532,
+            "share_price": 832
+        },
+        {
+            "stock_name": "Infosys",
+            "Num_of_shares": 1023,
+            "share_price": 534
+        }
+    ]
+}
