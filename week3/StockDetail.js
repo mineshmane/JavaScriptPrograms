@@ -66,17 +66,8 @@ try {
 			console.log('Successfully wrote file');
 		}
 	});
-	//var sockreport = new StockDetail();
-	//sockreport.setStocks(liststocks);
-	//var data = fs.readFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/stockRepo.json");
-	//var object = JSON.parse(data);
-	//console.log("object type of : ", typeof (object));
+
 	for (s in liststocks) {
-
-
-		// console.log("User Name:" + s.getName() + "\nCompany Name:" + s.getCompany() + "\nCompany Symbol:"
-		// 	+ s.getSymbol() + "\nShares:" + s.getShares() + "\nPrice:" + s.getPrice() + "\nTotal Price:"
-		// 	+ s.getTotalprice() + "\n");
 		console.log(stock)
 	}
 

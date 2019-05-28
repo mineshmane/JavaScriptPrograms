@@ -1,7 +1,6 @@
 
 
-//var read=require('readline-sync');
-//var prompt = require('prompt-sync')();
+
 module.exports = {
 
   /**
@@ -14,7 +13,7 @@ module.exports = {
     var rice = object.Rice
     var wheat = object.Wheats
     var pulse = object.Pulse
-    for (i in rice) {
+    for (let i in rice) {
       console.log(rice[i]);
       console.log("price per kg:" + rice[i].price + "kg");
       console.log("Total quantity:" + wg);
@@ -23,7 +22,7 @@ module.exports = {
     }
 
 
-    for (i in wheat) {
+    for (let i in wheat) {
       console.log(wheat[i]);
       console.log("price per kg:" + wheat[i].price + "kg");
       console.log("Total quantity:" + wg);
@@ -32,7 +31,7 @@ module.exports = {
     }
 
 
-    for (i in pulse) {
+    for (let i in pulse) {
       console.log(pulse[i]);
       console.log("price per kg:" + pulse[i].price + "kg");
       console.log("Total quantity:" + wg);
@@ -136,7 +135,7 @@ module.exports = {
   stockReport(object) {
     try {
       var stock = object.Stock;
-      for (key in stock) {
+      for (let key in stock) {
         console.log("\n");
         console.log("stock name : " + stock[key].stock_name);
         console.log("price of each share: " + stock[key].share_price);

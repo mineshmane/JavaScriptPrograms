@@ -8,8 +8,6 @@ class Stock {
         this.totalprice
 
     }
-
-
     getName() {
         return name;
     }
