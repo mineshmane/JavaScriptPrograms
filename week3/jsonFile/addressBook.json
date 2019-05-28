@@ -1,0 +1,28 @@
+{
+    "person": [
+        {
+            "firstName": "avani",
+            "lastName": "tikhile",
+            "address": "jalahalli",
+            "city": "Amravati",
+            "zip": 444701,
+            "mobile": "5689235689"
+        },
+        {
+            "firstName": "dipali ",
+            "lastName": "munde",
+            "address": "rajajinagar",
+            "city": "akola",
+            "zip": 560057,
+            "mobile": 7845124578
+        },
+        {
+            "firstName": "shruti",
+            "lastName": "S J",
+            "address": "shivaji nagar",
+            "city": "nagpur",
+            "zip": 577501,
+            "mobile": 5678234589
+        }
+    ]
+}
