@@ -1,0 +1,46 @@
+{
+    "number": [
+        {
+            "intNum": 120
+        }
+    ],
+    "string": [
+        {
+            "stringName": "Rahul"
+        }
+    ],
+    "boolean": [
+        {
+            "bool": true
+        }
+    ],
+    "Undefine": [
+        {
+            "undefineValue": ""
+        }
+    ],
+    "Null": [
+        {
+            "nullValue": null
+        }
+    ],
+
+
+    "Stock": [
+        {
+            "stock_name": 123,
+            "Num_of_shares": "IBM",
+            "share_price": "abcdd"
+        },
+        {
+            "stock_name": true,
+            "Num_of_shares": "abcd",
+            "share_price": 832
+        },
+        {
+            "stock_name": "Infosys",
+            "Num_of_shares": true,
+            "share_price": false
+        }
+    ]
+}

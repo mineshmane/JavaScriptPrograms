@@ -9,37 +9,44 @@ module.exports = {
    * @returns in value
    */
   inventory(object, wg) {
-    console.log("Inventory")
-    var rice = object.Rice
-    var wheat = object.Wheats
-    var pulse = object.Pulse
-    for (let i in rice) {
-      console.log(rice[i]);
-      console.log("price per kg:" + rice[i].price + "kg");
-      console.log("Total quantity:" + wg);
-      console.log('Total price for ' + rice[i].name + "is:Rs", rice[i].price * wg);
-      console.log("");
+    console.log(" input ", wg);
+
+    if (!isNaN(wg) && wg > 0) {
+      console.log("Inventory")
+      var rice = object.Rice
+      var wheat = object.Wheats
+      var pulse = object.Pulse
+      for (let i in rice) {
+        console.log(rice[i]);
+        console.log("price per kg:" + rice[i].price + "kg");
+        console.log("Total quantity:" + wg);
+        console.log('Total price for ' + rice[i].name + "is:Rs", rice[i].price * wg);
+        console.log("");
+      }
+
+
+      for (let i in wheat) {
+        console.log(wheat[i]);
+        console.log("price per kg:" + wheat[i].price + "kg");
+        console.log("Total quantity:" + wg);
+        console.log("Total price for " + wheat[i].name + "is:Rs", wheat[i].price * wg);
+        console.log("");
+      }
+
+
+      for (let i in pulse) {
+        console.log(pulse[i]);
+        console.log("price per kg:" + pulse[i].price + "kg");
+        console.log("Total quantity:" + wg);
+        let total = (pulse[i].price * wg)
+        console.log("Total price for " + pulse[i].name + "is:Rs", total);
+        console.log("");
+        return total;
+      }
+
+    } else {
+      console.log(" input weigth should be number and greaterv than 0")
     }
-
-
-    for (let i in wheat) {
-      console.log(wheat[i]);
-      console.log("price per kg:" + wheat[i].price + "kg");
-      console.log("Total quantity:" + wg);
-      console.log("Total price for " + wheat[i].name + "is:Rs", wheat[i].price * wg);
-      console.log("");
-    }
-
-
-    for (let i in pulse) {
-      console.log(pulse[i]);
-      console.log("price per kg:" + pulse[i].price + "kg");
-      console.log("Total quantity:" + wg);
-      console.log("Total price for " + pulse[i].name + "is:Rs", pulse[i].price * wg);
-      console.log("");
-    }
-
-
 
   },
 
@@ -53,27 +60,39 @@ module.exports = {
   regExp(name, fullname, mobilenumber, dt) {
     var file = require("fs");
     try {
-      var filedata = file.readFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/RegData.json");
-      var str2 = JSON.parse(filedata);
-      //var str = data.asText();
-      var str = str2.usename;
-      // var str=str2;
-      console.log(" before replacment of json object: ");
 
-      console.log(str);
-      //replace the name taken from user 
-      str = str.replace("<<name>>", name);
-      str = str.replace("<<full name>>", fullname);
-      str = str.replace("xxxxxxxxxx", mobilenumber);
-      str = str.replace("dd/mm/yyyy", dt);
+      if (!isNaN(mobilenumber)) {
+        if (this.allLetter(name) && this.allLetter(fullname)&&this.digitsOnly(mobilenumber)) {
 
-      console.log()
-      //print the modified information
-      console.log(" After Replace,ent of json Mesasge: ");
+          
+            var filedata = file.readFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/RegData.json");
+            var str2 = JSON.parse(filedata);
+          
+          //var str = data.asText();
+          var str = str2.usename;
+          // var str=str2;
+          console.log(" before replacment of json object: ");
 
-      console.log(str);
+          console.log(str);
+          //replace the name taken from user 
+          str = str.replace("<<name>>", name);
+          str = str.replace("<<full name>>", fullname);
+          str = str.replace("xxxxxxxxxx", mobilenumber);
+          str = str.replace("dd/mm/yyyy", dt);
+
+          console.log()
+          //print the modified information
+          console.log(" After Replace,ent of json Mesasge: ");
+
+          console.log(str);
+          return 1;
+        }
+      } else {
+        console.log(" input is wrong ");
+
+      }
     } catch (error) {
-      console.log(" File not found Exception");
+      console.log(" input are wrongs");
 
     }
 
@@ -149,7 +168,9 @@ module.exports = {
     catch (err) {
       console.log('ERROR');
     }
-    return stock;
+    
+    
+    return 1;
   },
 
 
