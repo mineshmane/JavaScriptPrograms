@@ -1,114 +1,9 @@
 
-var read=require('readline-sync');
+var read = require('readline-sync');
+var fs = require('fs');
+var utility = require('../week3/OOpUtility')
 //var prompt = require('prompt-sync')();
 module.exports = {
-  inventory(object, wg) {
-    console.log("Inventory")
-    var rice = object.Rice
-    var wheat = object.Wheats
-    var pulse = object.Pulse
-    for (key in rice) {
-      console.log(rice[key]);
-      console.log("price per kg:" + rice[key].price + "kg");
-      console.log("Total quantity:" + wg);
-      console.log("Total price for " + rice[key].name + "is:Rs", rice[key].price * wg);
-      console.log("");
-    }
-
-
-    for (key in wheat) {
-      console.log(wheat[key]);
-      console.log("price per kg:" + wheat[key].price + "kg");
-      console.log("Total quantity:" + wg);
-      console.log("Total price for " + wheat[key].name + "is:Rs", wheat[key].price * wg);
-      console.log("");
-    }
-
-
-    for (key in pulse) {
-      console.log(pulse[key]);
-      console.log("price per kg:" + pulse[key].price + "kg");
-      console.log("Total quantity:" + wg);
-      console.log("Total price for " + pulse[key].name + "is:Rs", pulse[key].price * wg);
-      console.log("");
-    }
-
-
-
-  },
-
-  //Regular expression
-
-  regex(name, fullname, mobilenumber, dt) {
-    var file = require("fs");
-
-    var data = file.readFileSync("/home/abc/mochatest/OOprogram_JS/regData.txt", "utf8");
-    //replace the name taken from user 
-    data = data.replace("<<name>>", name);
-    data = data.replace("<<fullname>>", fullname);
-    data = data.replace("<<xxxxxxxxxx>>", mobilenumber);
-    data = data.replace("<<xx-xx-xxxx>>", dt);
-
-    console.log();
-    //print the modified information
-    console.log(data);
-  },
-
-
-  deckOfCards() {
-    var suit = ["Spade", "Diamond", "Club", "Heart"];
-    var rank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
-    var n = suit.length * rank.length;
-    var cards = [];
-    for (let i = 0; i < suit.length; i++) {
-      for (let j = 0; j < rank.length; j++) {
-        cards.push("" + suit[i] + rank[j])
-
-      }
-    }
-
-    var temp;
-    for (var i = 0; i < n; i++) {
-      var shuff = Math.floor(Math.random() * n);
-      // console.log(shuff);
-      temp = cards[shuff];
-      cards[shuff] = cards[i];
-      cards[i] = temp;
-    }
-    console.log("cards output\n" + cards)
-    console.log("  ")
-    return cards;
-
-  },
-
-  // to distribute 9 cards to 4 people each and print what cards does each person have
-
-  distributingCards() {
-
-    var play = 0;
-    var cards = this.deckOfCards();
-    var personCards = [[], [], [], []];
-    for (let p = 0; p < 4; p++) {
-
-      for (let j = 0; j < 9; j++) {
-
-        personCards[p][j] = cards[j + play];
-
-      }
-      play = Math.floor(Math.random() * cards.length);
-
-    }
-   
-    console.log(" \n cards distributed among the four players are \n");
-    console.log("the first players cards are : "  + personCards[0]);
-
-    console.log("the second players cards are : " + personCards[1]);
-    console.log("the third players cards are : "  + personCards[2]);
-    console.log("the fourth players cards are : " + personCards[3]);
-    //return play;
-  },
-
-
   //Address Book
 
   // to read the first name and validate it
@@ -117,8 +12,9 @@ module.exports = {
 
     try {
       var read = require('readline-sync');
-      var fname = read.question("Enter your first name ");
-      if (!isNaN(fname)) throw "Enter valid first name";
+      do {
+        var fname = read.question("Enter your first name ");
+      } while (utility.allLetter(fname) !== true);
       return fname;
     }
     catch (err) {
@@ -132,8 +28,11 @@ module.exports = {
   inputLastName() {
     try {
       var read = require('readline-sync');
-      var lname = read.question("Enter your last name ");
-      if (!isNaN(lname)) throw "Enter valid last name";
+      do {
+        var lname = read.question("Enter your last name ");
+      } while (utility.allLetter(lname) == false)
+
+
       return lname;
     }
     catch (err) {
@@ -146,9 +45,9 @@ module.exports = {
   inputAddress() {
     try {
 
-      var read = require('readline-sync');
-      var address = read.question("Enter your address ");
-      if (!isNaN(address)) throw "Enter valid address";
+      do {
+        var address = read.question("Enter your Address");
+      } while (utility.allLetter(address) == false)
       return address;
     }
     catch (err) {
@@ -160,9 +59,10 @@ module.exports = {
 
   inputCity() {
     try {
-      var read = require('readline-sync');
-      var city = read.question("Enter your city ");
-      if (!isNaN(city)) throw "Enter valid city name";
+      do {
+        var city = read.question("Enter your city ");
+      } while (utility.allLetter(city) == false)
+
       return city;
     }
     catch (err) {
@@ -174,9 +74,10 @@ module.exports = {
 
   inputZip() {
     try {
-      var read = require('readline-sync');
-      var zip = read.question("Enter the ZIP code");
-      if (isNaN(zip)) throw "Enter valid zip code";
+      do {
+        var zip = read.question("Enter the ZIP code");
+      } while (this.zipValid(zip) == false || (zip.length != 6))
+
       return zip;
     }
     catch (err) {
@@ -184,14 +85,25 @@ module.exports = {
     }
   },
 
+  zipValid(inputtxt) {
+    var letters = /^\d{6}$/;
+    if (inputtxt.match(letters)) {
+      console.log('Your zip have accepted : ');
+      return true;
+    }
+    else {
+      console.log('Please input 6 digits Number 0-9 only');
+      return false;
+    }
+  },
+
   // to read the mobile number  and validate it
 
   inputMobile() {
     try {
-      var read = require('readline-sync');
-      var mobile = read.question("Enter your mobile number ");
-      if (isNaN(mobile)) throw "Enter valid mobile number";
-      if (mobile.length != 10) throw "Enter ten digit valid mobile number ";
+      do {
+        var mobile = read.question("Enter your mobile number ");
+      } while (utility.mobileNumber(mobile) == false)
       return mobile;
     }
     catch (err) {
@@ -207,6 +119,7 @@ module.exports = {
 
   addPerson(object) {
     try {
+
       var personObj = object.person;
       var fname = this.inputFirstName();
       var lname = this.inputLastName();
@@ -224,10 +137,12 @@ module.exports = {
         mobile: mob
       });
 
-      console.log(personObj);
+      return 1;
+      //  console.log(personObj);
+      // this.saveFile(personObj, file);
     }
     catch (err) {
-      console.log("ERROR : " + err);
+      console.log("ERROR : in add person " + err);
     }
 
 
@@ -267,6 +182,7 @@ module.exports = {
       switch (ch) {
         case 1: var address = this.inputAddress();
           personObj[val].address = address;
+
           break;
         case 2: var city = this.inputCity();
           personObj[val].city = city;
@@ -318,14 +234,17 @@ module.exports = {
     console.log("the persons details are");
     console.log(personObj[val]);
 
-    var ch = read.questionInt("are you sure? \n " +
-      "1.Delete \n 2.exit ");
+    var ch = read.questionInt("are you sure? \n " + "1.Delete \n 2.exit ");
 
     if (ch === 1) {
       personObj.splice(val, 1);
+      console.log(" deleted successfully please save the file");
+
     }
     else
-      return;
+      console.log(personObj[val], " record not deleted");
+
+    return;
 
   },
   /*
@@ -333,8 +252,17 @@ module.exports = {
   */
 
   saveFile(object) {
-    
-    file.writeFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/addressBook.json", JSON.stringify(object));
+
+    //   const jsonString = JSON.stringify(object);
+    // fs.writeFile(file, jsonString, err => {
+    // 	if (err) {
+    // 		console.log('Error writing file', err);
+    // 	} else {
+    // 		console.log('Successfully wrote file');
+    // 	}
+    // });
+
+    fs.writeFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/addressBook.json", JSON.stringify(object));
     console.log("save successful :) ");
   },
 
@@ -365,7 +293,7 @@ module.exports = {
 
     }
     console.log(object)
-    file.writeFileSync('addressData.json', JSON.stringify(object));
+    // file.writeFileSync('addressData.json', JSON.stringify(object));
 
   },
 
@@ -375,11 +303,12 @@ module.exports = {
 
   sortbyzip(object) {
 
+
     for (let j = 0; j < object.person.length - 1; j++) {
 
       if (object.person[j].zip > object.person[j + 1].zip) {
-        let temp = object.person[j]
-        object.person[j] = object.person[j + 1]
+        let temp = object.person[j];
+        object.person[j] = object.person[j + 1];
         object.person[j + 1] = temp;
       }
     }
@@ -393,18 +322,18 @@ module.exports = {
   *          that method.
   */
 
-  AddressBook(object, read) {
-    var read = require('readline-sync');
+  AddressBook(object, file) {
+
     try {
       console.log("****** Personal Address Book ******");
       var key = Number(read.question("Choose from the given options " +
-          "1. Add Person\n2. Edit Person\n3. Delete Person\n4. Sort By Name\n5. Sort by Zip\n6. Display\n7. Save into file\n8. Exit\n"
-        )
+        "1. Add Person\n2. Edit Person\n3. Delete Person\n4. Sort By Name\n5. Sort by Zip\n6. Display\n7. Save into file\n8. Exit\n"
+      )
       );
       if (isNaN(key)) throw "enter a valid input "
       switch (key) {
         case 1:
-          this.addPerson(object);
+          this.addPerson(object, file);
           return this.AddressBook(object);
         case 2:
           this.editPerson(object);
@@ -433,7 +362,7 @@ module.exports = {
       }
     }
     catch (err) {
-      console.log("ERROR: " + err)
+      console.log("ERROR: in main aaddrees book " + err)
     }
   },
 

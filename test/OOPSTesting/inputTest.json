@@ -42,5 +42,9 @@
             "Num_of_shares": true,
             "share_price": false
         }
-    ]
+    ],
+    "person":{
+        "firstName":" "
+
+    }
 }

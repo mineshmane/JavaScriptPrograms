@@ -120,7 +120,7 @@ module.exports = {
   allLetter(inputtxt) {
     var letters = /[a-zA-Z]+$/;
     if (inputtxt.match(letters) && (inputtxt.length >= 3)) {
-      console.log('Your name have accepted :');
+      console.log('Your input accepted :');
       return true;
     }
     else {
@@ -134,14 +134,14 @@ module.exports = {
    * @param int value 
    * @returns true /false
    */
-  digitsOnly(inputtxt) {
-    var letters = /^\d{10}$/;
+  mobileNumber(inputtxt) {
+    var letters = /^[6-9]\d{9}$/;
     if (inputtxt.match(letters)) {
       console.log('Your Number have accepted : ');
       return true;
     }
     else {
-      console.log('Please input 10 digits Number 0-9 only');
+      console.log('Please input start with 6 -9 and  10 digits Number 0-9 only');
       return false;
     }
   },
@@ -172,6 +172,60 @@ module.exports = {
     
     return 1;
   },
+
+  deckOfCards() {
+    var suit = ["Spade", "Diamond", "Club", "Heart"];
+    var rank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+    var n = suit.length * rank.length;
+    var cards = [];
+    for (let i = 0; i < suit.length; i++) {
+      for (let j = 0; j < rank.length; j++) {
+        cards.push("" + suit[i] + rank[j])
+
+      }
+    }
+
+    var temp;
+    for (var i = 0; i < n; i++) {
+      var shuff = Math.floor(Math.random() * n);
+      // console.log(shuff);
+      temp = cards[shuff];
+      cards[shuff] = cards[i];
+      cards[i] = temp;
+    }
+    console.log("cards output\n" + cards)
+    console.log("  ")
+    return cards;
+
+  },
+
+  // to distribute 9 cards to 4 people each and print what cards does each person have
+
+  distributingCards() {
+
+    var play = 0;
+    var cards = this.deckOfCards();
+    var personCards = [[], [], [], []];
+    for (let p = 0; p < 4; p++) {
+
+      for (let j = 0; j < 9; j++) {
+
+        personCards[p][j] = cards[j + play];
+
+      }
+      play = Math.floor(Math.random() * cards.length);
+
+    }
+
+    console.log(" \n cards distributed among the four players are \n");
+    console.log("the first players cards are : " + personCards[0]);
+
+    console.log("the second players cards are : " + personCards[1]);
+    console.log("the third players cards are : " + personCards[2]);
+    console.log("the fourth players cards are : " + personCards[3]);
+    //return play;
+  },
+
 
 
 
