@@ -1,28 +1,28 @@
 {
     "Doctors": [
         {
-            "Name": "Dr.Mehta",
+            "Name": "Dr Mehta",
             "ID": 150,
             "Specialization": "Orthopedic",
             "Availability": "Both",
-            "NoOfPatients": 3
+            "NoOfPatients": 5
         },
         {
-            "Name": "Dr.Joshi",
+            "Name": "Dr Joshi",
             "ID": 151,
             "Specialization": "Psychiatrist",
             "Availability": "AM",
             "NoOfPatients": 2
         },
         {
-            "Name": "Dr.Jadhav",
+            "Name": "Dr Jadhav",
             "ID": 152,
             "Specialization": "HeartSpcilist",
             "Availability": "PM",
             "NoOfPatients": 1
         },
         {
-            "Name": "Dr.Mane",
+            "Name": "Dr Mane",
             "ID": 153,
             "Specialization": "Sergen",
             "Availability": "Both",
@@ -52,9 +52,9 @@
             "Appointed_To": "Dr.Mehta"
         },
         {
-            "Name": "shruti jadhav",
+            "Name": "shruti",
             "ID": 6,
-            "mobNo": "1234567890",
+            "mobNo": "9999999990",
             "Age": "23",
             "Appointed_To": "Dr.Mehta"
         },
@@ -75,42 +75,19 @@
             "Appointment": "32/5/2019"
         },
         {
-            "Name": "shreya",
-            "ID": 7,
-            "mobNo": "9899999999",
-            "Appointment": "31/5/2019"
+            "Name": "bharat",
+            "ID": 815,
+            "mobNo": "7889987889",
+            "Appointed_To": "Dr.Jadhav",
+            "Appointment": "1/6/2019"
         },
         {
-            "Name": "sandhy",
-            "ID": 536,
-            "mobNo": "9098789087",
-            "Appointment": "31/5/2019"
-        },
-        {
-            "Name": "mmmm",
-            "ID": 595,
-            "mobNo": "9988779900",
-            "Appointment": "31/5/2019"
-        },
-        {
-            "Name": "errty",
-            "ID": 487,
-            "mobNo": "6666777789",
-            "Appointment": "31/5/2019"
-        },
-        {
-            "Name": "hhjj",
-            "ID": 232,
-            "mobNo": "7878787878",
-            "Appointment": "31/5/2019"
-        },
-        {
-            "Name": "minesh",
-            "ID": 209,
-            "mobNo": "9898989898",
-            "Age": "78",
+            "Name": "hari",
+            "ID": 519,
+            "mobNo": "7896541236",
+            "Age": 78,
             "Appointed_To": "Dr.Mehta",
-            "Appointment": "32/5/2019"
+            "Appointment": "2/6/2019"
         }
     ]
 }

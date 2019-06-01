@@ -62,12 +62,12 @@ module.exports = {
     try {
 
       if (!isNaN(mobilenumber)) {
-        if (this.allLetter(name) && this.allLetter(fullname)&&this.digitsOnly(mobilenumber)) {
+        if (this.allLetter(name) && this.allLetter(fullname) && this.digitsOnly(mobilenumber)) {
 
-          
-            var filedata = file.readFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/RegData.json");
-            var str2 = JSON.parse(filedata);
-          
+
+          var filedata = file.readFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/RegData.json");
+          var str2 = JSON.parse(filedata);
+
           //var str = data.asText();
           var str = str2.usename;
           // var str=str2;
@@ -118,7 +118,7 @@ module.exports = {
    */
 
   allLetter(inputtxt) {
-    var letters = /[a-zA-Z]+$/;
+    var letters = /^[a-zA-Z_ ]+$/;
     if (inputtxt.match(letters) && (inputtxt.length >= 3)) {
       console.log('Your input accepted :');
       return true;
@@ -139,12 +139,31 @@ module.exports = {
     if (inputtxt.match(letters)) {
       console.log('Your Number have accepted : ');
       return true;
+
     }
     else {
       console.log('Please input start with 6 -9 and  10 digits Number 0-9 only');
       return false;
     }
   },
+  /**
+   * @description this method is for print stock report using object of json parser
+   * @param object of json parser
+   * @returns stock values
+   */
+
+  ageValid(inputtxt) {
+    var letters = /^[0-9]\d{1}$/;
+    if (inputtxt.match(letters)) {
+      console.log('Your age accepted : ');
+      return true;
+    } else {
+      return false;
+    }
+  },
+  
+
+
 
   /**
    * @description this method is for print stock report using object of json parser
@@ -168,10 +187,15 @@ module.exports = {
     catch (err) {
       console.log('ERROR');
     }
-    
-    
+
+
     return 1;
   },
+  /**
+   * @description this method is for print stock report using object of json parser
+   * @param object of json parser
+   * @returns stock values
+   */
 
   deckOfCards() {
     var suit = ["Spade", "Diamond", "Club", "Heart"];
@@ -200,6 +224,11 @@ module.exports = {
   },
 
   // to distribute 9 cards to 4 people each and print what cards does each person have
+  /**
+   * @description this method is for print stock report using object of json parser
+   * @param object of json parser
+   * @returns stock values
+   */
 
   distributingCards() {
 

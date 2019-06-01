@@ -7,6 +7,11 @@ module.exports = {
   //Address Book
 
   // to read the first name and validate it
+  /**
+    * @description this method is for input frist Name in book
+    * @param Nothing
+    * @returns nothing
+    */
 
   inputFirstName() {
 
@@ -84,7 +89,7 @@ module.exports = {
       console.log("ERROR : " + err);
     }
   },
-
+  //zip validation
   zipValid(inputtxt) {
     var letters = /^\d{6}$/;
     if (inputtxt.match(letters)) {
@@ -116,7 +121,11 @@ module.exports = {
   * purpose: to a person's details
   */
 
-
+  /**
+    * @description this method is for addd person in address book
+    * @param json object
+    * @returns return nothing
+    */
   addPerson(object) {
     try {
 
@@ -152,6 +161,11 @@ module.exports = {
   /**
   * purpose: to edit a person's details
   */
+  /**
+     * @description this method is for edit person 
+     * @param json object
+     * @returns return updated object
+     */
 
   editPerson(object) {
     try {
@@ -212,6 +226,11 @@ module.exports = {
   /**
   * purpose: to delete a person
   */
+  /**
+    * @description this method is for delete person 
+    * @param json object
+    * @returns return nothing
+    */
 
   deletePerson(object) {
     var val = -1;
@@ -250,6 +269,11 @@ module.exports = {
   /*
   * purpose: to save it into the file
   */
+ /**
+    * @description this method is for saving file
+    * @param json object
+    * @returns return nothing
+    */
 
   saveFile(object) {
 
@@ -269,7 +293,11 @@ module.exports = {
   /**
   * purpose: to display the object.
   */
-
+  /**
+    * @description this method is for display addrress bokk
+    * @param json object
+    * @returns return nothing
+    */
   display(object) {
     var personObj = object.person;
     for (var key in personObj) {
@@ -281,6 +309,11 @@ module.exports = {
   /**
   * purpose: to sort the object by its name.
   */
+  /**
+    * @description this method is for address book sort by name 
+    * @param json object
+    * @returns sorted list
+    */
 
   sortbyname(object) {
 
@@ -300,6 +333,11 @@ module.exports = {
   /**
   * purpose:To sort the object by its zipcode.
   */
+ /**
+    * @description this method is for sort book by zipcode
+    * @param json object
+    * @returns sorted list
+    */
 
   sortbyzip(object) {
 
@@ -321,7 +359,11 @@ module.exports = {
   * purpose: In this method we are taking users choice to add, edit or display a person and call the
   *          that method.
   */
-
+/**
+    * @description this method is for main method 
+    * @param json object
+    * @returns return nothing
+    */
   AddressBook(object, file) {
 
     try {
