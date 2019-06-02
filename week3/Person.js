@@ -6,7 +6,6 @@ class Person {
         this.city;
         this.zip;
         this.mobile;
-
     }
     getName() {
         return name;
