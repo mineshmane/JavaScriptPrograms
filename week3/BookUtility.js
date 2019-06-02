@@ -187,7 +187,8 @@ module.exports = {
       }
 
       console.log("the persons details are");
-      console.log(personObj[val]);
+      // console.log(personObj[val]);
+      this.displayPerson(object, val)
 
       var ch = read.questionInt("choose from the given options \n " +
         "1.edit address \n 2.edit city \n 3.edit zipcode \n 4.edit mobile \n");
@@ -222,6 +223,20 @@ module.exports = {
 
   },
 
+  displayPerson(clinique, index) {
+    try {
+      console.log("\t\t~ first Name : " + clinique.person[index].firstName);
+      console.log("\t\t~ Last Name : " + clinique.person[index].lastName);
+      console.log("\t\t~ Address : " + clinique.person[index].address);
+      console.log("\t\t~ City : " + clinique.person[index].city);
+      console.log("\t\t~ Zip :- " + clinique.person[index].zip);
+      console.log("\t\t~ Contact Number :- " + clinique.person[index].mobile);
+    } catch (error) {
+      console.log("* ERROR: " + error);
+    }
+  },
+
+
 
   /**
   * purpose: to delete a person
@@ -252,8 +267,11 @@ module.exports = {
 
     console.log("the persons details are");
     console.log(personObj[val]);
+    deleteFormat = /^[1-2]\d{0}$/;
+    do {
+      var ch = read.questionInt("are you sure? \n " + "1.Delete \n 2.exit ");
+    } while (deleteFormat.test(ch) == false)
 
-    var ch = read.questionInt("are you sure? \n " + "1.Delete \n 2.exit ");
 
     if (ch === 1) {
       personObj.splice(val, 1);
@@ -269,11 +287,11 @@ module.exports = {
   /*
   * purpose: to save it into the file
   */
- /**
-    * @description this method is for saving file
-    * @param json object
-    * @returns return nothing
-    */
+  /**
+     * @description this method is for saving file
+     * @param json object
+     * @returns return nothing
+     */
 
   saveFile(object) {
 
@@ -307,6 +325,31 @@ module.exports = {
   },
 
   /**
+   * @description this method is for print all doctors in tabular form
+   * @param int value 
+   * @returns in value
+   */
+  displayAddressBook(clinique) {
+    console.log("\n\t\t\t\t\t*** All Person Details ***\n");
+    console.log("\t-------------------------------------------------------------------------------------------------");
+    console.log("\t| First Name \t| Last Name \t|  Address \t|\t City \t|\t Zip \t| Contact \t|");
+    console.log("\t-------------------------------------------------------------------------------------------------");
+    try {
+      for (let i = 0; i < clinique.person.length; i++) {
+        console.log("\t| " + clinique.person[i].firstName + ""
+          + "\t| " + clinique.person[i].lastName + "\t"
+          + "\t| " + clinique.person[i].address + "\t"
+          + "\t| " + clinique.person[i].city + "\t"
+          + "\t| " + clinique.person[i].zip + "\t"
+          + "\t| " + clinique.person[i].mobile + "\t|");
+      }
+    } catch (error) {
+      console.log("* ERROR: " + error);
+    }
+    console.log("\t-------------------------------------------------------------------------------------------------");
+  },
+
+  /**
   * purpose: to sort the object by its name.
   */
   /**
@@ -333,11 +376,11 @@ module.exports = {
   /**
   * purpose:To sort the object by its zipcode.
   */
- /**
-    * @description this method is for sort book by zipcode
-    * @param json object
-    * @returns sorted list
-    */
+  /**
+     * @description this method is for sort book by zipcode
+     * @param json object
+     * @returns sorted list
+     */
 
   sortbyzip(object) {
 
@@ -359,38 +402,68 @@ module.exports = {
   * purpose: In this method we are taking users choice to add, edit or display a person and call the
   *          that method.
   */
-/**
-    * @description this method is for main method 
-    * @param json object
-    * @returns return nothing
-    */
+  /**
+      * @description this method is for main method 
+      * @param json object
+      * @returns return nothing
+      */
   AddressBook(object, file) {
 
     try {
-      console.log("****** Personal Address Book ******");
-      var key = Number(read.question("Choose from the given options " +
-        "1. Add Person\n2. Edit Person\n3. Delete Person\n4. Sort By Name\n5. Sort by Zip\n6. Display\n7. Save into file\n8. Exit\n"
-      )
-      );
-      if (isNaN(key)) throw "enter a valid input "
-      switch (key) {
+      keyFormat = /^[1-9]\d{0}$/;
+
+      do {
+        console.log("\n\t\t\t\t*** All Address Details ***\n");
+        console.log("\t|===============================ADDRESS BOOK ===========================|");
+        console.log("\t|-----------------------------------------------------------------------|");
+
+
+        console.log("\t|\t\t\t\t1.Add Person\t\t\t\t|\n\t|\t\t\t\t2.Edit Person\t\t\t\t|\n\t|\t\t\t\t3.Delete Person\t\t\t\t|\n\t|\t\t\t\t4.Sort By Name\t\t\t\t|\n\t|\t\t\t\t5.Sort by Zip\t\t\t\t|\n\t|\t\t\t\t6.Display\t\t\t\t|\n\t|\t\t\t\t7.Save file\t\t\t\t|\n\t|\t\t\t\t8.EXIT\t\t\t\t\t|");
+        console.log("\t|-----------------------------------------------------------------------|");
+        console.log("\t|===============================MY ADDRESS BOOK=========================|");
+        console.log();
+
+
+
+        var key = read.question('Enter the option:');
+      } while (keyFormat.test(key) == false)
+
+      // console.log("****** Personal Address Book ******");
+      // var key = Number(read.question("Choose from the given options ")
+      //  // "1. Add Person\n2. Edit Person\n3. Delete Person\n4. Sort By Name\n5. Sort by Zip\n6. Display\n7. Save into file\n8. Exit\n"
+      // )
+      // );
+
+      switch (parseInt(key)) {
         case 1:
+          console.log("Add Person");
+
           this.addPerson(object, file);
           return this.AddressBook(object);
         case 2:
+          console.log("Edit Person");
+
           this.editPerson(object);
           return this.AddressBook(object);
         case 3:
+          console.log("Delete Person");
+
           this.deletePerson(object, file);
           return this.AddressBook(object);
         case 4:
+          console.log("Sorty By Name");
+
           this.sortbyname(object);
           return this.AddressBook(object);
         case 5:
+          console.log("Sort By Zip");
+
           this.sortbyzip(object);
           return this.AddressBook(object);
         case 6:
-          this.display(object);
+          console.log("Displaying all Address Book");
+
+          this.displayAddressBook(object);
           return this.AddressBook(object);
         case 7:
           this.saveFile(object, file);
@@ -402,6 +475,7 @@ module.exports = {
           console.log("Wrong Input  ");
           return this.AddressBook(object);
       }
+
     }
     catch (err) {
       console.log("ERROR: in main aaddrees book " + err)
