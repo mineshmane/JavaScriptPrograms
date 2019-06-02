@@ -14,7 +14,7 @@
  *  @since          :29-05-2019
  *
  ******************************************************************************/
-///var prompt = require('prompt-sync')();
+
 var read = require('readline-sync');
 var fs = require('fs');
 const utitlity = require('../week3/ClinicUtility')

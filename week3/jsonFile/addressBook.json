@@ -1,1 +1,36 @@
-{"person":[{"firstName":"minesh","lastName":"mane","address":"beed","city":"pune","zip":"424344","mobile":"9898989898"},{"firstName":"minesh","lastName":"mane","address":"pune","city":"tjj","zip":"676767","mobile":"6767676767"},{"firstName":"sandhya","lastName":"kokate","address":"beed","city":"beed","zip":"876544","mobile":"7887788778"},{"firstName":"minesh","lastName":"mane","address":"beed","city":"oune","zip":"784512","mobile":"9696969696"}]}
+{
+    "person": [
+        {
+            "firstName": "minesh",
+            "lastName": "mane",
+            "address": "beed",
+            "city": "pune",
+            "zip": "424344",
+            "mobile": "9898989898"
+        },
+        {
+            "firstName": "minesh",
+            "lastName": "mane",
+            "address": "pune",
+            "city": "tjj",
+            "zip": "676767",
+            "mobile": "6767676767"
+        },
+        {
+            "firstName": "sandhya",
+            "lastName": "kokate",
+            "address": "beed",
+            "city": "beed",
+            "zip": "876544",
+            "mobile": "7887788778"
+        },
+        {
+            "firstName": "minesh",
+            "lastName": "mane",
+            "address": "beed",
+            "city": "oune",
+            "zip": "784512",
+            "mobile": "9696969696"
+        }
+    ]
+}

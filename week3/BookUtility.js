@@ -295,14 +295,7 @@ module.exports = {
 
   saveFile(object) {
 
-    //   const jsonString = JSON.stringify(object);
-    // fs.writeFile(file, jsonString, err => {
-    // 	if (err) {
-    // 		console.log('Error writing file', err);
-    // 	} else {
-    // 		console.log('Successfully wrote file');
-    // 	}
-    // });
+    
 
     fs.writeFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/addressBook.json", JSON.stringify(object));
     console.log("save successful :) ");

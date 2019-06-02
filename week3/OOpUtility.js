@@ -161,7 +161,7 @@ module.exports = {
       return false;
     }
   },
-  
+
 
 
 
@@ -198,7 +198,7 @@ module.exports = {
    */
 
   deckOfCards() {
-    var suit = ["Spade", "Diamond", "Club", "Heart"];
+    var suit = ['♠︎', '♣︎', '♥︎', '♦︎'];
     var rank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
     var n = suit.length * rank.length;
     var cards = [];
@@ -209,7 +209,9 @@ module.exports = {
       }
     }
 
+
     var temp;
+    //n=52
     for (var i = 0; i < n; i++) {
       var shuff = Math.floor(Math.random() * n);
       // console.log(shuff);
@@ -217,7 +219,7 @@ module.exports = {
       cards[shuff] = cards[i];
       cards[i] = temp;
     }
-    console.log("cards output\n" + cards)
+    console.log("shuffle cards output\n" + cards)
     console.log("  ")
     return cards;
 
@@ -234,6 +236,8 @@ module.exports = {
 
     var play = 0;
     var cards = this.deckOfCards();
+    // console.log(cards);
+
     var personCards = [[], [], [], []];
     for (let p = 0; p < 4; p++) {
 
@@ -245,14 +249,15 @@ module.exports = {
       play = Math.floor(Math.random() * cards.length);
 
     }
-
+  
     console.log(" \n cards distributed among the four players are \n");
-    console.log("the first players cards are : " + personCards[0]);
+    console.log("first player : " + personCards[0]);
 
-    console.log("the second players cards are : " + personCards[1]);
-    console.log("the third players cards are : " + personCards[2]);
-    console.log("the fourth players cards are : " + personCards[3]);
-    //return play;
+    console.log("second player : " + personCards[1]);
+    console.log("Third player : " + personCards[2]);
+    console.log("Fourth player : " + personCards[3]);
+    
+    return [personCards[0], personCards[1], personCards[2], personCards[3]];
   },
 
 

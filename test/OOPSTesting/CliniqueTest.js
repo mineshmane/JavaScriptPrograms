@@ -4,7 +4,7 @@ const fs = require('fs');
 
 var data = fs.readFileSync('/home/admin1/JavaScriptPrograms-master/week3/jsonFile/Clinic.json')
 var clinique = JSON.parse(data);
-
+var arr = ['rahul', '^%$$##', 'true', undefined, 'null', 0]
 describe('Doctor Search Method', function () {
     it(' mehtod return index of object by Name search', function () {
         var result = clinic.searchDoctorByname(clinique, "Dr Mehta");
