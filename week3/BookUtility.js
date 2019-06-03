@@ -145,6 +145,7 @@ module.exports = {
         zip: zip,
         mobile: mob
       });
+      console.log(" details added successfully");
 
       return 1;
       //  console.log(personObj);
@@ -295,7 +296,7 @@ module.exports = {
 
   saveFile(object) {
 
-    
+
 
     fs.writeFileSync("/home/admin1/JavaScriptPrograms-master/week3/jsonFile/addressBook.json", JSON.stringify(object));
     console.log("save successful :) ");

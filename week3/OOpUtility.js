@@ -120,7 +120,7 @@ module.exports = {
   allLetter(inputtxt) {
     var letters = /^[a-zA-Z_ ]+$/;
     if (inputtxt.match(letters) && (inputtxt.length >= 3)) {
-      console.log('Your input accepted :');
+
       return true;
     }
     else {
@@ -137,7 +137,7 @@ module.exports = {
   mobileNumber(inputtxt) {
     var letters = /^[6-9]\d{9}$/;
     if (inputtxt.match(letters)) {
-      console.log('Your Number have accepted : ');
+
       return true;
 
     }
@@ -147,15 +147,15 @@ module.exports = {
     }
   },
   /**
-   * @description this method is for print stock report using object of json parser
-   * @param object of json parser
+   * @description this method is fpr age validation purpose
+   * @param  integer value
    * @returns stock values
    */
 
   ageValid(inputtxt) {
     var letters = /^[0-9]\d{1}$/;
     if (inputtxt.match(letters)) {
-      console.log('Your age accepted : ');
+
       return true;
     } else {
       return false;
@@ -192,9 +192,9 @@ module.exports = {
     return 1;
   },
   /**
-   * @description this method is for print stock report using object of json parser
-   * @param object of json parser
-   * @returns stock values
+   * @description this method is for deck of cards for shuffle bunddle of cards
+   * @param  arraay
+   * @returns merged array
    */
 
   deckOfCards() {
@@ -210,16 +210,16 @@ module.exports = {
     }
 
 
-    var temp;
-    //n=52
+
+    //n=card.length=52
     for (var i = 0; i < n; i++) {
       var shuff = Math.floor(Math.random() * n);
       // console.log(shuff);
-      temp = cards[shuff];
+      var temp = cards[shuff];
       cards[shuff] = cards[i];
       cards[i] = temp;
     }
-    console.log("shuffle cards output\n" + cards)
+    console.log("shuffle cards output: \n" + cards)
     console.log("  ")
     return cards;
 
@@ -227,9 +227,9 @@ module.exports = {
 
   // to distribute 9 cards to 4 people each and print what cards does each person have
   /**
-   * @description this method is for print stock report using object of json parser
-   * @param object of json parser
-   * @returns stock values
+   * @description this method is for distribute 9 cards to 4 people each and print what cards does each person have
+   * @param nothing
+   * @returns shuffle array
    */
 
   distributingCards() {
@@ -249,14 +249,14 @@ module.exports = {
       play = Math.floor(Math.random() * cards.length);
 
     }
-  
+
     console.log(" \n cards distributed among the four players are \n");
     console.log("first player : " + personCards[0]);
 
     console.log("second player : " + personCards[1]);
     console.log("Third player : " + personCards[2]);
     console.log("Fourth player : " + personCards[3]);
-    
+
     return [personCards[0], personCards[1], personCards[2], personCards[3]];
   },
 

@@ -18,5 +18,5 @@ function deckOfCards() {
     util.distributingCards();
 }
 //call to the function
-deckOfCards();
+//deckOfCards();
 module.exports = deckOfCards();

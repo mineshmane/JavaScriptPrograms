@@ -91,12 +91,14 @@ module.exports = {
                     Name: Name,
                     ID: ID,
                     mobNo: mobNo,
-                    "Appointed_To": Appointed_To,
+                    Appointed_To: Appointed_To,
                     Appointment: date.getDate() + "/" + date.getDay() + "/" + date.getFullYear()
                 })
                 console.log("\n" + Name + "'s Appointment is Fixed at Day " + date.getDate() + "/" + date.getDay() + "/" + date.getFullYear()
                     + " with Dr. " + clinique.Doctors[index].Name);
             }
+
+            //this.saveFile(clinique)
             /**
              * write the file into json
              */
@@ -458,11 +460,11 @@ module.exports = {
 
         console.log("the persons details are");
         console.log(personObj[val]);
-        deleteFormat = /^[1-2]\d{0}$/;
+        deleteFormat = /^[0-3]\d{0}$/;
         do {
             var ch = read.question("are you sure? \n " + "1.Delete \n 2.exit ");
         } while (deleteFormat.test(ch) == false)
-        if (ch === 1) {
+        if (ch == 1) {
             personObj.splice(val, 1);
             console.log(" deleted successfully please save the file");
 
